@@ -1,0 +1,10 @@
+<h1>Login</h1>
+{{#link-to "register"}}Register{{/link-to}}
+{{#if loginFailed}}
+  <div class="">Invalid username or password.</div>
+{{/if}}
+<form>
+    {{input type="text" placeholder="Enter your Employee-ID" name="username" value=username}}
+    {{input type="password" placeholder="Enter your Password" name="password" value=password}}
+    <input type="submit" value="Login" {{action "login"}}/>    
+</form>

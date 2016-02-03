@@ -1,0 +1,10 @@
+<div>
+    {{#if appreciation.from}}
+    <h3>{{appreciation.from}}</h3>
+    {{else if appreciation.to}}
+    <h3>{{appreciation.to}}</h3>
+    {{else}}
+    <h3>Anonymous</h3>
+    {{/if}}
+    <p>{{appreciation.message}}</p>
+</div>

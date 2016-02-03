@@ -1,0 +1,18 @@
+<h1>Welcome {{model.name}}</h1>
+{{#link-to "index"}}Logout{{/link-to}}
+<section>
+    <p>Your points: {{model.pg}}</p>
+    <p>Received points: {{model.pr}}</p>    
+</section>
+<section>
+    <h2>Appreciation Received</h2>
+    {{#each model.appreciation-received as |ar|}}
+        {{appreciation-list appreciation=ar}}
+    {{/each}}
+</section>
+<section>
+    <h2>Appreciation Sent</h2>
+    {{#each model.appreciation-sent as |as|}}
+        {{appreciation-list appreciation=as}}
+    {{/each}}
+</section>
